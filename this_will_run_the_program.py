@@ -8,14 +8,8 @@ try:
         print("2 = Subtraction")
         print("3 = Multiplication")
         print("4 = Division")
-        print("5 = Exit")
 
         choice = int(input("Enter your choice: "))
-
-        if choice == 5:
-            print("Thank you for using this program")
-            break
-
         first_number = int(input("Enter first number: "))
         second_number = int(input("Enter second number: "))
 
@@ -28,10 +22,20 @@ try:
         elif choice == 4:
           calculator.divition(first_number, second_number)
         else:
-          print("Please enter a valid choice")
+            print("Please enter a valid choice")
+            continue
 
-except:
-    print("You have an ERROR LOL NOOB")
+        again = input("Do you want to continue? (yes/no): ").lower()
+
+        if again != "yes":
+            print("Thank you for using this program")
+            break
+
+except ValueError:
+    print("Invalid input. Please enter a number only")
+
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
 
 
 
