@@ -7,3 +7,7 @@ class SimpleAppCalculator:
         answer = first_number - second_number
         print(answer)
 
+    def multiplication(self, first_number, second_number):
+        answer = first_number * second_number
+        print(answer)
+        
